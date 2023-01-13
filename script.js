@@ -10,9 +10,12 @@ function encriptar() {
     var textoEncriptado = textoEncriptado.replace(/o/img, "ober");
     var textoEncriptado = textoEncriptado.replace(/u/img, "ufat");
 
+    
     document.getElementById("textoDesencriptado").innerHTML = textoEncriptado;
     document.getElementById("botonCopiar").style.display = "show";
     document.getElementById("botonCopiar").style.display = "inherit";
+    document.getElementById("muneco").style.display = "none";
+    document.getElementsByClass("texto").style.display = "none";
 }
 
 function desencriptar() {
