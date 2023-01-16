@@ -15,7 +15,7 @@ function encriptar() {
     document.getElementById("botonCopiar").style.display = "show";
     document.getElementById("botonCopiar").style.display = "inherit";
     document.getElementById("muneco").style.display = "none";
-    document.getElementsByClass("texto").style.display = "none";
+    document.getElementById("texto").style.display = "none";
 }
 
 function desencriptar() {
