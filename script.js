@@ -31,10 +31,15 @@ function desencriptar() {
     var textoEncriptado = textoEncriptado.replace(/ufat/img, "u");
 
     document.getElementById("textoDesencriptado").innerHTML = textoEncriptado;
+    document.getElementById("botonCopiar").style.display = "show";
+    document.getElementById("botonCopiar").style.display = "inherit";
+    document.getElementById("muneco").style.display = "none";
+    document.getElementById("texto").style.display = "none";
 }
 
 function copiar(){
     var contenido = document.querySelector("#textoDesencriptado");
     contenido.select();
     document.execCommand("copy");
+    alert("Mensaje copiado")
 }
