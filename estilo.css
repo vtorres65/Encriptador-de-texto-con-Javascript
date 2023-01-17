@@ -5,7 +5,7 @@
     line-height: 150%;
     margin: auto;
     width: 1440px;
-    height: 1024px;
+    height: 724px;
 }
 
 main{
@@ -32,7 +32,7 @@ main{
     height: auto;*/
     position: absolute;
     width: 400px;
-    height: 944px;
+    height: 544px;
     left: 1000px;
     top: 40px;
     border-radius: 32px;
@@ -61,6 +61,7 @@ h6{
     /*padding-top: 5%;
     width: 100%;
     float: left;*/
+    margin: 20px;
     width: 120px;
     height: 48px;
 }
@@ -109,6 +110,7 @@ h6{
     border: none;
     outline: none;
     font-size: 16px;
+    text-align: center;
 }
 
 #botonCopiar{
@@ -144,4 +146,10 @@ h6{
     background: #D8DFE8;
     color: #0A3871;
     cursor: pointer;
+}
+
+@media screen and (max-width:480px){
+    body{
+        background: black;
+    }
 }
