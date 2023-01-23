@@ -41,5 +41,10 @@ function copiar(){
     var contenido = document.querySelector("#textoDesencriptado");
     contenido.select();
     document.execCommand("copy");
-    alert("Mensaje copiado")
+    limpiar();
+    alert("Mensaje copiado");
+}
+
+function limpiar(){
+    document.getElementById("textoEncriptado").value = "";
 }

@@ -15,28 +15,22 @@ main{
 }
 
 .izquierdo{
-    /*float: left;
-    width: 70%;
-    height: 70%;*/
-    position: absolute;
-    width: 577px;
-    height: 48px;
-    left: 240px;
-    top: 168px;
+    float: left;
+    /*position: fixed;*/
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
     border-radius: 24px;
 }
 
 .derecho{
-    /*float: right;
-    width: 30%;
-    height: auto;*/
-    position: absolute;
-    width: 400px;
-    height: 544px;
-    left: 1000px;
-    top: 40px;
+    float: right;
+    /*position: fixed;*/
     border-radius: 32px;
     background: #FFFFFF;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
 }
 .botones{
     /*float: left;*/
@@ -46,7 +40,7 @@ main{
     border-radius: 24px;
 }
 
-h6{
+.informacion{
     width: 205px;
     height: 18px;
     color: #495057;
@@ -58,23 +52,20 @@ h6{
 }
 
 .logo{
-    /*padding-top: 5%;
-    width: 100%;
-    float: left;*/
-    margin: 20px;
-    width: 120px;
-    height: 48px;
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 10%;
 }
 
 #textoEncriptado{
     /*float: left;
-    margin-left: 10%;
-    margin-top: 10%;
+    margin-left: 10%;    
     width: 80%;
     height: 80%;*/
-    padding: 200px;
+    margin-top: 90px;
+    /*padding: 200px;
     width: 577px;
-    height: 48px;
+    height: 48px;*/
     color: #0A3871;
     font-size: 32px;
     font-style: normal;
@@ -83,6 +74,11 @@ h6{
     border: none;
     outline: none;
     background: #F3F5FC;
+}
+
+::placeholder {color: #0A3871;}
+#textoEncriptado{
+    outline: none;
 }
 
 #muneco{
@@ -152,4 +148,17 @@ h6{
     body{
         background: black;
     }
+}
+
+.pie-pagina{
+    margin: 1m 0 0 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
