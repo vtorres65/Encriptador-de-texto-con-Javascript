@@ -4,51 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="estilo.css">
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Encriptador | Challenge ONE</title>
+
 </head>
+
 <body>
     <div class="contenedor">
-        <header class="encabezado">
-            <img src="img/Logo.png" alt="Logo de Alura" class="logo">
-        </header>
         <main >
-            <div class="izquierdo">
-                <input type="text" id="textoEncriptado" placeholder="Ingrese el texto aqui">
-                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
-                <div class="botones">
-                    <button type="button" id="botonEncriptado">Encriptar</button>
-                    <button type="button" id="botonDesencriptado">Desencriptar</button>
+            <header class="encabezado">
+                <img src="img/Logo.png" alt="Logo de Alura" class="logo">
+            </header>
+        
+            <section class="izquierdo">
+                <div class="input">
+                    <textarea maxlength="1000" class="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                    <div class="mensaje">
+                        <h6 class="informacion"> <img src="img/exclamacion.png" alt="exclamacion"> Solo letras minúsculas y sin acentos</h6>
+                    </div>
+                    <div class="botones">
+                        <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>
                 </div>
-            </div>
-            <div class="derecho">
-                <img src="img/Muneco.png" alt="Muñeco buscando datos encriptados" id="muneco">
-                <h1 id="texto">Ningún mensaje fue encontrado</h1>
-                <textarea name="resultado" id="textoDesencriptado" cols="20" 
-                rows="10">Ingresa el texto que desees encriptar o desencriptar.</textarea>
-                <button type="button" id="botonCopiar">Copiar</button>
-            </div>
+            </section>
+
+            <section class="derecho">
+                <div class="cajaMensaje">
+                    <div class="foto">
+                        <img src="img/Muneco.png" alt="Muñeco buscando datos encriptados" id="muneco">
+                    </div>
+                    <div class="msj">
+                        <h2 id="texto">Ningún mensaje fue encontrado</h2>
+                        <p id="textoDesencriptado">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                </div>
+                <button class="copiar" data-clipboard-target=".cajaMensaje" onclick="copiarTexto()">Copiar</button>
+            </section>
+
         </main>
         <footer class="pie-pagina">
-            <p>© 2023 Todos los derechos reservados por Vladimir Torres</p>
+            <p>© 2023 Todos los derechos reservados por Vladimir Torres
+                <a href="https://www.linkedin.com/in/vladimir-torres-vargas-b80b67203/" target="_blank"><i class="fa-brands fa-linkedin" id="linkedin"></i></a>
+                <a href="https://github.com/vtorres65" target="_blank"><i class="fa-brands fa-github" id="github"></i></a>
+            </p>
         </footer>
     </div>
+
+
+
 </body>
+<script src="JS/script.js"></script>
+<script src="JS/clipboard.min.js"></script>
 <script>
-    var btn = document.querySelector("#botonEncriptado");
-    btn.onclick = encriptar;
-
-    var btn2 = document.querySelector("#botonDesencriptado");
-    btn2.onclick = desencriptar;
-
-    var btn3 = document.querySelector("#botonCopiar");
-    btn3.onclick = copiar;
-
-    
+    var clipboard = new ClipboardJS(".copiar")
 </script>
 </html>
